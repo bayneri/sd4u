@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="codeArea" prefHeight="355.0" prefWidth="463.0" />
+      <Button fx:id="addButton" layoutX="76.0" layoutY="362.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" text="Add Code" />
+      <Button fx:id="cancelButton" layoutX="248.0" layoutY="362.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" text="Cancel" />
+   </children>
+</Pane>

@@ -1,0 +1,125 @@
+/*
+ *	softdev4u content css
+ *
+ */
+
+/*  
+ *	v20150310 hb 
+ *	v20150305 hb init
+ *
+ */
+Use smaller fonts as you go in the list structures
+ul {
+	font-size: 100%;
+}
+
+ol {
+	font-size: 100%;
+}
+
+ul ul {
+	font-size: 80%;
+}
+
+ul ol {
+	font-size: 80%;
+}
+
+ol ul {
+	font-size: 80%;
+}
+
+ol ol {
+	font-size: 80%;
+}
+
+ul ul ul {
+	font-size: 80%;
+}
+
+ul ol ul {
+	font-size: 80%;
+}
+
+ol ul ul {
+	font-size: 80%;
+}
+
+ol ol ul {
+	font-size: 80%;
+}
+
+ul ul ol {
+	font-size: 80%;
+}
+
+ul ol ol {
+	font-size: 80%;
+}
+
+ol ul ol {
+	font-size: 80%;
+}
+
+ol ol ol {
+	font-size: 80%;
+}
+
+.softdev4uContent-table {
+	width: 100%;
+	padding: 10;
+	border: 1px solid black;
+}
+
+.softdev4uContent-table tr {
+	border: 1px solid black;
+}
+
+.softdev4uContent-table td {
+	border: 1px solid black;
+}
+
+.softdev4uContent-table th {
+	border: 1px solid black;
+}
+
+.softdev4uContent-div-code {
+	background-color: white;
+}
+
+.softdev4uContent-div-code-output {
+	background-color: yellow;
+}
+
+.softdev4uContent-div-remark {
+	background-color: magenta;
+}
+
+/*
+ *	Block markups
+ *	- definition, remark
+ */
+.sd4uDivDefinition {
+	background-color: #e6e6e6;
+}
+
+.sd4uDivTheorem {
+	background-color: #FFFCED;
+}
+
+.sd4uDivRemark {
+	background-color: #ffcc66;
+}
+
+/*
+ *	In line markups
+ */
+.sd4uEmp {
+	color: gold;
+	font-style: italic;
+}
+
+.sd4uDefined {
+	color: #b3b3b3;
+	font-style: italic;
+}

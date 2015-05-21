@@ -1,0 +1,8 @@
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="show">Show Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="show">Hide Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="hide">Show Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="hide">Hide Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="show" style="">Show Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="show" style="">Hide Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="hide" style="">Show Answer</button>
+<button type="button" onclick="softdev4u_showHideAnswerButtonClicked(this);" data-softdev4u-status="hide" style="">Hide Answer</button>

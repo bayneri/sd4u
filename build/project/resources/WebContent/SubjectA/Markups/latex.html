@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4uContent.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4uContent.js"></script>
+<script
+	src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4uContent_init();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Heap
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div class="softdev4u-twoColumn">
+				<div class="softdev4u-columnOneOfTwo">
+					<div class="sd4uDivDefinition">
+						A <em class="sd4uDefined">(Min) Heap</em> is a
+						tree, \(T = \{R, T_{0}, T_{1}, \cdots, T_{n-1} \}\) with the
+						following properties:
+						<ol>
+							<li>Every subtree of \(T\) is a heap; and,</li>
+							<li>The root of \(T\) is less than or equal to the root of
+								every subtree of \(T\). That is, \(R \le R_{i}\) for all \(i, 0
+								\le i \le n\), where \(R_{i}\) is the root of \(T_{i}\).</li>
+						</ol>
+					</div>
+				</div>
+				<div class="softdev4u-columnTwoOfTwo">
+					<img alt="n-ary tree" src="images/n-aryTree.png">
+				</div>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

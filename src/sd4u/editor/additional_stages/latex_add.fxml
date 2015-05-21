@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sd4u.editor.additional_stages.LatexAddController" >
+   <children>
+      <TextArea fx:id="latexArea" prefHeight="200.0" prefWidth="395.0" promptText="Latex Code" />
+      <Button fx:id="addButton" layoutX="77.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Add" />
+      <Button fx:id="cancelButton" layoutX="213.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Cancel" />
+   </children>
+</Pane>

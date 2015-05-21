@@ -1,0 +1,24 @@
+// ==========================================
+// == sd4u Template content 
+// == metadataMain.txt
+// ==========================================
+
+//	Format
+//	#SubName (end with _M in metadataMain, without _M in metadataSub
+//	directory/sec1 path/to/html (dummyDir if not director is not used)
+//	label for table of content
+//	html pages or subroutine calls. The first char is 
+//		"-" if html page, 
+//		"*" if subroutine call
+//
+// ==========================================
+
+
+// ==========================================
+#Ch0Basics_M
+dummyDir
+sd4uTest suit
+*SubBasics
+*SubPages
+*Markups
+#END

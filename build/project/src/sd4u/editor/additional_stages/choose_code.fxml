@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sd4u.editor.additional_stages.ChooseCodeController">
+   <children>
+      <Label layoutX="22.0" layoutY="33.0" prefHeight="26.0" prefWidth="65.0" text="Language" />
+      <Button fx:id="chooseButton" layoutX="471.0" layoutY="194.0" mnemonicParsing="false" text="Choose Code" />
+      <Label layoutX="22.0" layoutY="72.0" prefHeight="26.0" prefWidth="40.0" text="Name" />
+      <TextField fx:id="nameField" layoutX="114.0" layoutY="72.0" prefHeight="26.0" prefWidth="344.0" promptText="Example Name" />
+      <Label layoutX="22.0" layoutY="112.0" prefHeight="26.0" prefWidth="83.0" text="Line Number" />
+      <TextField fx:id="lineNumberField" layoutX="114.0" layoutY="112.0" prefHeight="26.0" prefWidth="344.0" promptText="Line Number on first open" />
+      <Label layoutX="22.0" layoutY="153.0" prefHeight="26.0" prefWidth="83.0" text="Link Title" />
+      <TextField fx:id="linkTitleField" layoutX="114.0" layoutY="153.0" prefHeight="26.0" prefWidth="344.0" promptText="Title of link" />
+      <TextField fx:id="fileField" layoutX="114.0" layoutY="194.0" prefHeight="26.0" prefWidth="344.0" promptText="Path" />
+      <Label layoutX="21.0" layoutY="194.0" prefHeight="26.0" prefWidth="83.0" text="File" />
+      <Button fx:id="addButton" layoutX="114.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Add " />
+      <Button fx:id="cancelButton" layoutX="245.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Cancel" />
+      <ChoiceBox fx:id="languageChooser" layoutX="114.0" layoutY="33.0" prefHeight="26.0" prefWidth="167.0" />
+   </children>
+</Pane>

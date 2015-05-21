@@ -1,0 +1,71 @@
+// ==========================================
+// == sd4u Template content 
+// == metadataSub.txt
+// ==========================================
+//	Function:
+//	Subroutines are defined here. 
+//	Order is not important.
+//	SubName should be unique over both matadataMain and matadataSub.
+//
+//	Format:
+//	#SubName (end with _M in metadataMain, without _M in metadataSub
+//	directory/sec1 (dummyDir if not director is not used)
+//	label
+
+
+// ------------------------------------------
+// Basics
+// ------------------------------------------
+#SubBasics
+SubjectA/Basics
+toc-Subject A
+-sepBasics.html
+-test1.html
+-test2.html
+-test3.html
+#END
+
+
+// ------------------------------------------
+// Page Types
+// ------------------------------------------
+#SubPages
+SubjectA/PageTypes
+subjectB
+-sepConceptB.html
+-columnSingle.html
+-columnDouble.html
+-columnDoubleSingle.html
+-columnSingleDoubleSingle.html
+-sepConceptBSubCall.html
+// subroutine call
+*SwitchToCode
+#END
+
+
+// ------------------------------------------
+// Page Types
+// ------------------------------------------
+#Markups
+SubjectA/Markups
+Switch to code
+// ----------
+-sepMarkups0.html
+-visibleHidden.html
+-latex.html
+-DefinitionRemark.html
+-sepMarkups1.html
+#END
+
+
+// ------------------------------------------
+// Page Types
+// ------------------------------------------
+#SwitchToCode
+SubjectA/SwitchToCode
+Switch to code
+-sepSwitchToCodeStart.html
+-codeSingleColumnWithSwitch.html
+-codeDoubleColumnWithSwitch.html
+-sepSwitchToCodeEnd.html
+#END
