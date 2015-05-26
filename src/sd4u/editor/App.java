@@ -10,7 +10,7 @@ public class App extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
 		
-		stage.setTitle("Project v0.0");
+		stage.setTitle("Project v1.0");
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui.fxml"));
 		Parent parent 	= fxmlLoader.load();
 				//FXMLLoader.load(getClass().getResource("gui.fxml"));

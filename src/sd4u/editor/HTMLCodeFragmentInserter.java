@@ -69,6 +69,8 @@ public class HTMLCodeFragmentInserter {
 		theoremCode = HTMLReader.readFile( getClass().getResource(theoremPath) );
 		answerCode = HTMLReader.readFile( getClass().getResource(answerPath) );
 		codeCode = HTMLReader.readFile( getClass().getResource(codePath) );
+		//System.out.println(getClass().getResource("/WebContent/SubjectA/InsertibleFragments/asd asd.html").toString());
+		String tmp = HTMLReader.readFile( getClass().getResource("/WebContent/SubjectA/InsertibleFragments/asd asd.html") );
 	}
 	
 	final static String HTMLCodeInserterJS = "function insertHtmlAtCursor(html) {\n" +

@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import sd4u.html.UrlConverter;
 import javafx.collections.ObservableList;
 
 //all slide names must be different
@@ -18,7 +19,7 @@ public class ProjectSaver {
 		Date date = new Date();
 		sb.append(dateFormat.format(date));
 		
-		File theDir = new File(sb.toString());
+		File theDir = new File( UrlConverter.toJava( sb.toString() ) );
 
 		// if the directory does not exist, create it
 		if (!theDir.exists()) {

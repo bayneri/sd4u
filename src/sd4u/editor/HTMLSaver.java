@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 import sd4u.html.HTMLMerger;
 import sd4u.html.HTMLParser;
+import sd4u.html.UrlConverter;
 import sd4u.image.ImageDownloader;
 import sd4u.image.WrongFormatException;
 
@@ -21,6 +22,7 @@ public class HTMLSaver {
 	public static void finish(String html,String path,int type){
 		//System.out.println(html);
 		//System.out.println(html);
+		path=UrlConverter.toJava(path);
 		html=showHideAdjust(html);
 		String title = HTMLParser.getTitle(html);
 		String page = HTMLParser.getPage(html);

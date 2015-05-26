@@ -3,6 +3,7 @@ package sd4u.html;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -15,6 +16,11 @@ public class HTMLReader {
 	 * @return read full data from stated file
 	 */
 	public static String readFile( URL url ){
+		
+		url = UrlConverter.toJava(url);
+		
+		if(url==null)
+			return "";
 		
 		File file = new File(url.getPath());
 		
