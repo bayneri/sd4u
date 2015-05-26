@@ -5,6 +5,9 @@ import java.util.Stack;
 import sd4u.html.HTMLMerger;
 import sd4u.html.HTMLParser;
 
+/**
+ * This method provides undo and redo by storing any action
+ */
 public class HTMLEditorHistory{
 	
 	ExtendedHTMLEditor editor;
@@ -32,6 +35,9 @@ public class HTMLEditorHistory{
 		redoHistory.clear();
 	}
 	
+	/**
+	 * This method provides undo
+	 */
 	public void undo(){
 		if(undoHistory.empty())
 			return ;
@@ -47,6 +53,9 @@ public class HTMLEditorHistory{
 		editor.setHtmlText(merger.getFullHTMLForEditor());
 	}
 	
+	/**
+	 * This method provides redo
+	 */
 	public void redo(){
 		if(redoHistory.empty())
 			return ;
@@ -61,6 +70,9 @@ public class HTMLEditorHistory{
 		editor.setHtmlText(merger.getFullHTMLForEditor());	
 	}
 	
+	/**
+	 * This method clears all action history
+	 */
 	public void clearHistory(){
 		undoHistory.clear();
 		redoHistory.clear();

@@ -15,6 +15,10 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import sd4u.editor.HTMLCodeFragmentInserter;
 
+/**
+ * This class detects the path of the required code for "Switch to Code"
+and checks the validity of the path. And then do its duty.
+ */
 public class ChooseCodeController implements Initializable{
 	
 	@FXML

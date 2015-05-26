@@ -14,7 +14,10 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import sd4u.editor.HTMLCodeFragmentInserter;
 
-
+/**
+ * This class detects the path of the required code for "Add Image"
+and checks the validity of the path. And then do its duty.
+ */
 public class ImageAddController implements Initializable{
 	
 	@FXML
@@ -96,6 +99,8 @@ public class ImageAddController implements Initializable{
 					stage.close();
 					return;
 				}*/
+				
+				System.out.println("image  +++   " + url);
 				
 				StringBuffer sb=new StringBuffer();
 				

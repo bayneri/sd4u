@@ -10,6 +10,10 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import sd4u.editor.HTMLCodeFragmentInserter;
 
+/**
+ * This class detects the path of the required code for "Add LateX"
+and checks the validity of the path. And then do its duty.
+ */
 public class LatexAddController implements Initializable{
 
 	@FXML

@@ -31,9 +31,10 @@ import sd4u.html.HTMLMerger;
 import sd4u.html.HTMLReplacer;
 
 /**
- * This class imports default HTML Editor default slide layouts
+ * This class creates extended HTML Editor with additional facilities
+ * @author Acer Bilgisayar
+ *
  */
-
 public class ExtendedHTMLEditor extends HTMLEditor{
 	
 	private static final String CD_TITLE_PATH = "/WebContent/SubjectA/PageTypes2/columnDoubleTitle.html";
@@ -70,9 +71,6 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 		this.initialized = initialized;
 	}
 
-	/**
-	 * This method provides functions of the buttons
-	 */
 	public void initialize(){
 		cleaner = new HTMLGarbageCleaner();
 		editorHistory = new HTMLEditorHistory(this);
@@ -103,17 +101,10 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 		this.initializeBottomToolBar();
 	}
 	
-	/**
-	 * This method provides undo by returning act history
-	 * @return User's act history
-	 */
 	public HTMLEditorHistory getHistory(){
 		return editorHistory;
 	}
 	
-	/**
-	 *This method initializes Top Tool Bar 
-	 */
 	public void initializeTopToolBar(){
 		Node toolNode = this.lookup(".top-toolbar");
 		Node webNode = this.lookup(".web-view");
@@ -278,9 +269,6 @@ public class ExtendedHTMLEditor extends HTMLEditor{
         }
 	}
 	
-	/**
-	 *This method initializes Bottom Tool Bar 
-	 */
 	public void initializeBottomToolBar(){
 		Node bottomTool = this.lookup(".bottom-toolbar");
 		Node webNode = this.lookup(".web-view");
@@ -343,9 +331,6 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 		
 	}
 	
-	/**
-	 * This method reloads initial slide layout
-	 */
 	public void loadInitialPage(){
 		setInitialized(true);
 		HTMLMerger merger = new HTMLMerger( 	getClass().getResource(CSDS_TITLE_PATH),
@@ -355,16 +340,10 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 		editorHistory.addUndoHistory();
 	}
 	
-	/**
-	 * This method reloads with specified slide layout
-	 */
 	public void reloadWith( String htmlText ){
 		this.setHtmlText( htmlText );
 	}
 	
-	/**
-	 * This method reloads last slide for some changes which requires JavaScript changes.
-	 */
 	public void reload(){
 		//double value=0;
 		
@@ -379,17 +358,10 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 		//engine.executeScript("window.scrollTo(1000, 1000);");	
 	}
 	
-	/**
-	 * This method is written for debugging
-	 */
 	public void write(){
 		System.out.println(super.getHtmlText());
 	}
 	
-	/**
-	 * This method gets default slide layout's HTML code
-	 * @return default slide layout's HTML code
-	 */
 	public String getBasicHtml(){
 	//	System.out.println(super.getHtmlText());
 		return cleaner.getCleanedHtmlText( super.getHtmlText() );

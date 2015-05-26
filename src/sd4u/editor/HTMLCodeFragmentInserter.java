@@ -8,7 +8,9 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import netscape.javascript.JSException;
 
-
+/**
+ * This class reads the curent page style and applies user's changes in web codes
+ */
 public class HTMLCodeFragmentInserter {
 	
 	public final static String COLUMN_DOUBLE = "COLUMN_DOUBLE";
@@ -45,6 +47,9 @@ public class HTMLCodeFragmentInserter {
 	
 	ExtendedHTMLEditor editor;
 	
+	/**
+	 * This method inserts current pages web codes
+	 */
 	public HTMLCodeFragmentInserter(ExtendedHTMLEditor editor){
 		this.editor = editor;
 		Node webNode = editor.lookup(".web-view");
@@ -180,6 +185,9 @@ public class HTMLCodeFragmentInserter {
 		
 	}
 	
+	/**
+	 * This method provides user's changes occur in web codes
+	 */
 	public void insertFragmentType(String type){
 		editorHistory.addUndoHistory();
 		switch(type){

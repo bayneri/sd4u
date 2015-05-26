@@ -9,6 +9,9 @@ import sd4u.html.HTMLMerger;
 import sd4u.html.HTMLParser;
 import sd4u.html.HTMLReader;
 
+/**
+ * This method provides clean forsaken changes from HTML code
+ */
 public class HTMLGarbageCleaner {
 	
 	final static String DEFINITION = "<b>Definition </b>";
@@ -60,6 +63,9 @@ public class HTMLGarbageCleaner {
 		return html;
 	}
 	
+	/**
+	 * This method clears Markups' garbages
+	 */
 	public String clearMarkups(String html){
 		html=html.replace(DEFINITION, "");
 		html=html.replace(REMARK, "");
@@ -67,6 +73,9 @@ public class HTMLGarbageCleaner {
 		return html;
 	}
 	
+	/**
+	 * This method clears Latex's garbages
+	 */
 	public String clearLatexGarbages(String html){
 		
 		StringBuffer sb = new StringBuffer(html);
@@ -94,6 +103,9 @@ public class HTMLGarbageCleaner {
 		return sb.toString();
 	}
 	
+	/**
+	 * This method clears Double Column's garbages
+	 */
 	public String clearDoubleColumn(String html){
 		
 		int pos = 0;
@@ -130,6 +142,9 @@ public class HTMLGarbageCleaner {
 		
 	}
 	
+	/**
+	 * This method clears Show/Hide's garbages
+	 */
 	public String clearShowHideGarbages(String html){
 		
 		StringBuffer sb = new StringBuffer(html);
@@ -149,6 +164,9 @@ public class HTMLGarbageCleaner {
 		
 	}
 	
+	/**
+	 * This method clears Switch to Code's garbages
+	 */
 	public String clearSwitchToCodeGarbages(String html){
 		
 		System.out.println("asdasdasd S To C");

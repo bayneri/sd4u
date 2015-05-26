@@ -10,6 +10,9 @@ import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * This class takes images to editor by url or file path 
+ */
 public class ImageDownloader {
 	
 	public String downloadImage(String url,String path) throws WrongFormatException{
@@ -86,6 +89,11 @@ public class ImageDownloader {
 		
 	}
 	
+	/**
+	 * This method detects format of the image
+	 * @param url url or file path as string
+	 * @return format of the image
+	 */
 	public String getFormat(String url){
 		for(int i=url.length()-1,cnt=0;i>=0 && cnt<=5 ;i--,cnt++){
 			if( url.charAt(i)=='.' )

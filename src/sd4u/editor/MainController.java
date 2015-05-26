@@ -23,6 +23,9 @@ import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * This class provides adding tool bar to HTML editor
+ */
 public class MainController implements Initializable{
 	
 	@FXML

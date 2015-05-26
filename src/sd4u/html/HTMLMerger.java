@@ -2,6 +2,9 @@ package sd4u.html;
 
 import java.net.URL;
 
+/**
+*This class merges all editable containers and blocks which are fixed by HTML code.
+*/
 public class HTMLMerger {
 	final static String PRE_TITLE = "<!-- SOFTDEV4U PRETITLE -->";
 	final static String POST_TITLE = "<!-- SOFTDEV4U POSTTITLE -->";
@@ -24,6 +27,9 @@ public class HTMLMerger {
 	
 	HTMLReplacer replacer = new HTMLReplacer();
 	
+	/**
+	 * This method reads fixed parts' HTML codes and converts them to String.
+	 */
 	public void readFixedParts(){
 		initialized=true;
 		fixed1 = HTMLReader.readFile(getClass().getResource(fixed1Path));
@@ -33,6 +39,11 @@ public class HTMLMerger {
 		fixed3 = HTMLReader.readFile(getClass().getResource(fixed3Path));
 	}
 	
+	/**
+	 * This methods converts Page's and Title's HTML codes to String, and provides merging process begin. 
+	 * @param titleUrl URL of title's HTMLcode.
+	 * @param pageUrl URL of page's HTMLcode.
+	 */
 	public HTMLMerger(URL titleUrl, URL pageUrl){
 		
 		title=HTMLReader.readFile(titleUrl);
@@ -42,6 +53,11 @@ public class HTMLMerger {
 		
 	}
 	
+	/**
+	 * This methods provides merging process begin.
+	 * @param title URL of title's HTMLcode as String.
+	 * @param page URL of page's HTMLcode as String.
+	 */
 	public HTMLMerger(String title,String page){
 		this.title = title;
 		this.page=page;
@@ -49,6 +65,11 @@ public class HTMLMerger {
 			readFixedParts();
 	}
 	
+	
+	/**
+	 * This method returns merged HTML code (with relative .css and .js paths).
+	 * @return merged HTML code as String.
+	 */
 	public String getFullHTML(){
 		StringBuffer sb = new StringBuffer();
 		sb.append(fixed1);

@@ -7,9 +7,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * This class replaces  all relative paths(.css,.js) with full path to use at HTML Editor.
+ */
 public class HTMLReplacer {
 	
-	//this class replaces all relative paths(css,js) with full path to use at htmleditor.
+	/**
+	 * This method converts HTML code to string and returns toReplacedHTML's return value.
+	 * @param file The HTML file, which will be read.
+	 * @return full paths of .css and .js files
+	 */
 	public String htmlGetter(File file){
 		System.out.println(file.toString());
 		
@@ -40,6 +47,11 @@ public class HTMLReplacer {
 		return toReplacedHTML(initData);
 	}
 	
+	/**
+	 * This class returns full paths of .css and .js files.
+	 * @param initData
+	 * @return
+	 */
 	public String toReplacedHTML(String initData){
 		
 		int initialIndex = 0;

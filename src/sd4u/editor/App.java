@@ -1,13 +1,24 @@
 package sd4u.editor;
+/**
+ * @author H. Çetiner & Y.H. Kalaycý
+ * @version v1.0
+ *
+ */
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * This class is where all the application magic starts
+ */
 public class App extends Application{
 	
 	@Override
+	/**
+	 * This method starts the Java Application
+	 */
 	public void start(Stage stage) throws Exception {
 		
 		stage.setTitle("Project v1.0");
