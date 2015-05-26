@@ -25,6 +25,7 @@ import javafx.scene.input.MouseEvent;
 
 /**
  * This class provides adding tool bar to HTML editor
+ * @author H. Cetiner & Y.H. Kalayci 
  */
 public class MainController implements Initializable{
 	

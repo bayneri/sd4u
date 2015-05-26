@@ -2,6 +2,7 @@ package sd4u.image;
 
 /**
  * This class detects wrong image format
+ * @author H. Cetiner & Y.H. Kalayci
  */
 public class WrongFormatException extends Exception {
 

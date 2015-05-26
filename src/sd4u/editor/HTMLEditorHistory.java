@@ -7,6 +7,7 @@ import sd4u.html.HTMLParser;
 
 /**
  * This method provides undo and redo by storing any action
+ * @author H. Cetiner & Y.H. Kalayci
  */
 public class HTMLEditorHistory{
 	

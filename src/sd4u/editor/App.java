@@ -1,6 +1,6 @@
 package sd4u.editor;
 /**
- * @author H. Çetiner & Y.H. Kalaycý
+ * @author H. Cetiner & Y.H. Kalayci
  * @version v1.0
  *
  */

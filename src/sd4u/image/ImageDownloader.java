@@ -12,6 +12,7 @@ import java.net.URL;
 
 /**
  * This class takes images to editor by url or file path 
+ * @author H. Cetiner & Y.H. Kalayci
  */
 public class ImageDownloader {
 	

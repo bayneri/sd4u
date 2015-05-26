@@ -9,6 +9,11 @@ import sd4u.html.UrlConverter;
 import javafx.collections.ObservableList;
 
 //all slide names must be different
+
+/**
+ * This class provides all project with changings
+ * @author H. Cetiner & Y.H. Kalayci
+ */
 public class ProjectSaver {
 
 	public void save( ObservableList<CustomCellContent> list ){

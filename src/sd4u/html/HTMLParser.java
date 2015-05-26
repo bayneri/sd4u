@@ -1,8 +1,9 @@
 package sd4u.html;
 
 /**
-*This class parses given whole slide to editable containers and blocks which are fixed by HTML code.
-*/
+ *This class parses given whole slide to editable containers and blocks which are fixed by HTML code.
+ * @author H. Cetiner & Y.H. Kalayci
+ */
 public class HTMLParser {
 	final static String PRE_TITLE = "<!-- SOFTDEV4U PRETITLE -->";
 	final static String POST_TITLE = "<!-- SOFTDEV4U POSTTITLE -->";

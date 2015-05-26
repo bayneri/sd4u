@@ -9,6 +9,7 @@ import java.net.URL;
 
 /**
  * This class replaces  all relative paths(.css,.js) with full path to use at HTML Editor.
+  * @author H. Cetiner & Y.H. Kalayci
  */
 public class HTMLReplacer {
 	

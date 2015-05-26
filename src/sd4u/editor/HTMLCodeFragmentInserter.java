@@ -10,6 +10,7 @@ import netscape.javascript.JSException;
 
 /**
  * This class reads the curent page style and applies user's changes in web codes
+ * @author H. Cetiner & Y.H. Kalayci
  */
 public class HTMLCodeFragmentInserter {
 	

@@ -6,14 +6,17 @@ import java.io.FileReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-
+/**
+ * This class reads data and stores to use adding html fragment.
+ * @author Halil Cetiner & Y. Hakan Kalayci
+ *
+ */
 public class HTMLReader {
 	
-	/*
-	 * This method reads data and stores to use adding html fragment.
-	 * @author Yusuf Hakan Kalayci
-	 * @param path this path for reading data to use adding code fragment 
-	 * @return read full data from stated file
+	/**
+	 * This method reads data returns the code as String
+	 * @param url this path for reading data to use adding code fragment 
+	 * @return returnValue full data from stated file
 	 */
 	public static String readFile( URL url ){
 		
@@ -39,7 +42,11 @@ public class HTMLReader {
 		return returnValue;
 		
 	}
-	
+	/**
+	 * This data reads file and adds them into an ArrayList line by line
+	 * @param url path of file which will be read
+	 * @param al ArrayList which provides saving file line by line
+	 */
 	public static void readFile( URL url,ArrayList<String> al){
 		
 		File file = new File(url.getPath());

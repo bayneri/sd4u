@@ -13,12 +13,23 @@ import sd4u.html.UrlConverter;
 import sd4u.image.ImageDownloader;
 import sd4u.image.WrongFormatException;
 
+/**
+ * This class provides save singular pages with changings
+ * @author Halil Cetiner & Y. Hakan Kalayci
+ */
+
 public class HTMLSaver {
 	
 	public static int FILE = 0;
 	public static int PROJECT = 1;
 	
 	//type will be used for saving images and other data fixed areas such as /images
+	/**
+	 * This method finishes saving
+	 * @param html Html code as string
+	 * @param path File path project will be saved in
+	 * @param type type will be used for saving images and other data fixed areas such as images
+	 */
 	public static void finish(String html,String path,int type){
 		//System.out.println(html);
 		//System.out.println(html);
@@ -39,6 +50,13 @@ public class HTMLSaver {
 	//this part for images we must copy image to our directory or specified director than we should give that
 	//a relative path
 	//this part takes two path and than changes path in html text to relative path. 
+	
+	/**
+	 * This method provides using images by saving them in a folder
+	 * @param sb
+	 * @param initialIndex 
+	 * @param path
+	 */
 	public static void editPath(StringBuffer sb, int initialIndex,String path){
 		
 		StringBuffer prefix = new StringBuffer("");
@@ -81,10 +99,22 @@ public class HTMLSaver {
 		
 	}
 	
+	/**
+	 * This method checks that is there an image at Html code
+	 * @param html Html code which will be checked
+	 * @return
+	 */
 	public static boolean hasImage(String html){
 		return html.indexOf("<img src=")!=-1;
 	}
 	
+	/**
+	 * This method gets image to save in a new folder
+	 * @param html Html code
+	 * @param path image's path
+	 * @param name image's name
+	 * @return
+	 */
 	public static String downloadImages(String html,String path,String name){
 		StringBuffer sb = new StringBuffer(html);
 		int initIndex=0;
@@ -117,6 +147,11 @@ public class HTMLSaver {
 		return sb.toString();
 	}
 	
+	/**
+	 * This method detects the name of image by its path
+	 * @param path path of image
+	 * @return name of image
+	 */
 	public static String getName(String path){
 		String name="";
 		for(int i=path.length()-1;i>=0;i--)
@@ -127,6 +162,11 @@ public class HTMLSaver {
 		return name;
 	}
 	
+	/**
+	 * Provides saving edited Html code
+	 * @param html Html code
+	 * @param path path to save
+	 */
 	public static void saveHtmlFile(String html, String path){
 		
 		if( hasImage(html) )

@@ -13,6 +13,7 @@ import sd4u.editor.HTMLCodeFragmentInserter;
 /**
  * This class detects the path of the required code for "Add Code"
 and checks the validity of the path. And then do its duty.
+ * @author H. Cetiner & Y.H. Kalayci
  */
 public class CodeAddController implements Initializable{
 	

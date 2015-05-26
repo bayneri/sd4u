@@ -3,8 +3,9 @@ package sd4u.html;
 import java.net.URL;
 
 /**
-*This class merges all editable containers and blocks which are fixed by HTML code.
-*/
+ *This class merges all editable containers and blocks which are fixed by HTML code.
+ * @author H. Cetiner & Y.H. Kalayci
+ */
 public class HTMLMerger {
 	final static String PRE_TITLE = "<!-- SOFTDEV4U PRETITLE -->";
 	final static String POST_TITLE = "<!-- SOFTDEV4U POSTTITLE -->";

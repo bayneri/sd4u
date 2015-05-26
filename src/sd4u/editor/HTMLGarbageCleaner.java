@@ -11,6 +11,7 @@ import sd4u.html.HTMLReader;
 
 /**
  * This method provides clean forsaken changes from HTML code
+ * @author H. Cetiner & Y.H. Kalayci
  */
 public class HTMLGarbageCleaner {
 	

@@ -32,7 +32,7 @@ import sd4u.html.HTMLReplacer;
 
 /**
  * This class creates extended HTML Editor with additional facilities
- * @author Acer Bilgisayar
+ * @author H. Cetiner & Y.H. Kalayci
  *
  */
 public class ExtendedHTMLEditor extends HTMLEditor{
