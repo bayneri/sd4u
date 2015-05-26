@@ -10,6 +10,8 @@ import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import sd4u.html.UrlConverter;
+
 /**
  * This class takes images to editor by url or file path 
  * @author H. Cetiner & Y.H. Kalayci
@@ -18,31 +20,17 @@ public class ImageDownloader {
 	
 	public String downloadImage(String url,String path) throws WrongFormatException{
 		
-		//System.out.println("asdasdasdasd"+url);
+		url = UrlConverter.toJava(url);
 		
 		String format = getFormat(url);
-		
-		//System.out.println(format);
 		
 		if(format==null){
 			throw new WrongFormatException();
 		}
 		
-		//Image image = new Image(url);
-		
-		//final ImageView imageView = new ImageView(image);
-		
-		//StringBuffer sb = new StringBuffer(getClass().getResource("/WebContent/SubjectA/Images").toString());
-		//sb.replace(0, "file:/".length()-1, "");
-		//DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-		//Date date = new Date();
-		
-		//sb.append("/");
-		//sb.append(dateFormat.format(date));
 		StringBuffer sb = new StringBuffer(path);
 		sb.append(".");
 		sb.append(format);
-		//System.out.println(sb.toString());
 		
 		try {
 			URL url2 = new URL(url);
@@ -64,27 +52,6 @@ public class ImageDownloader {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		/*BufferedImage image2 = SwingFXUtils.fromFXImage(image, null); // Get buffered image.
-		BufferedImage imageRGB = new BufferedImage(image2.getWidth(), image2.getHeight(), BufferedImage.OPAQUE); // Remove alpha-channel from buffered image.
-		//Graphics2D graphics = imageRGB.createGraphics();
-		//graphics.drawImage(image, 0, 0, null);
-		
-		try {
-			
-			File output = new File( sb.toString() );
-			
-			if( output.exists() )
-				output.createNewFile();
-			
-			ImageIO.write(SwingFXUtils.fromFXImage(imageView.snapshot(null, null), null), "png", output);
-			
-			//ImageIO.write(SwingFXUtils.fromFXImage(image, null), format, output);
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 		
 		return sb.toString();
 		
