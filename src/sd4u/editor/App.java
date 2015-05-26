@@ -1,6 +1,6 @@
 package sd4u.editor;
 /**
- * @author H. Çetiner & Y.H. Kalaycý
+ * @author H. ï¿½etiner & Y.H. Kalaycï¿½
  * @version v1.0
  *
  */
@@ -21,7 +21,7 @@ public class App extends Application{
 	 */
 	public void start(Stage stage) throws Exception {
 		
-		stage.setTitle("Project v1.0");
+		stage.setTitle("Project v0.0");
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui.fxml"));
 		Parent parent 	= fxmlLoader.load();
 				//FXMLLoader.load(getClass().getResource("gui.fxml"));
