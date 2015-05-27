@@ -49,9 +49,10 @@ public class MainController implements Initializable{
 	
 	HTMLEditorHistory editorHistory;
 	
-	final String NEW_SLIDE = "New Slide";
+	final String NEW_SLIDE = "Add New Slide";
 	
 	public static CustomCellContent lastSlide;
+	public static int lastIndex;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -60,7 +61,7 @@ public class MainController implements Initializable{
 		
 		slideList.setItems(list);
 		
-		htmlEditor.initialize();
+		htmlEditor.initialize(slideList,list);
 		editorHistory = htmlEditor.getHistory();
 		//htmlEditor.addEventFilter( MouseEvent.MOUSE_RELEASED , editorHistory);
 		
@@ -75,6 +76,7 @@ public class MainController implements Initializable{
 		delete.setOnAction(e -> {
 			int index=slideList.getSelectionModel().getSelectedIndex();
 			list.remove(index);
+			
 			//System.out.println("delete " + index );
 		});
 		
@@ -94,14 +96,17 @@ public class MainController implements Initializable{
 					slideList.getContextMenu().show(slideList,click.getSceneX(),click.getSceneY());
 					
 				}
-				if (click.getClickCount() == 2) {
+				if (click.getClickCount() == 1) {
 		           //Use ListView's getSelected Item
 					CustomCellContent item=slideList.getSelectionModel().getSelectedItem();
+					int index = slideList.getSelectionModel().getSelectedIndex();
 					
 					if( item.title.equals( NEW_SLIDE ) ){
 						list.remove(list.size()-1);
 						list.add( new CustomCellContent("slide" + (list.size()+1)) );
 						list.add( new CustomCellContent(NEW_SLIDE) );
+						if(lastSlide!=null)
+							slideList.getSelectionModel().select(lastIndex);
 						System.out.println("new slide");
 					}
 					else{
@@ -116,7 +121,9 @@ public class MainController implements Initializable{
 								e.printStackTrace();
 							}
 						}
+						lastIndex=index;
 						lastSlide=item;
+						htmlEditor.textField.setText(item.title);
 						htmlEditor.reloadWith( item.htmlText );
 						editorHistory.setContent(item.undoHistory, item.redoHistory);
 						editorHistory.addUndoHistory();
@@ -178,12 +185,6 @@ public class MainController implements Initializable{
 		redo.setAccelerator(new KeyCodeCombination( KeyCode.Y , KeyCombination.CONTROL_DOWN ));
 		
 		htmlEditor.loadInitialPage();
-		
-		/*HTMLMerger merger = new HTMLMerger( 	getClass().getResource(CS_TITLE_PATH),
-				getClass().getResource(CS_PAGE_PATH)
-			);
-		htmlEditor.setHtmlText( merger.getFullHTMLForEditor() );
-		editorHistory.addUndoHistory();*/
 		
 	}
 
