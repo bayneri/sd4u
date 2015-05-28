@@ -4,17 +4,22 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Observable;
 import java.util.Set;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToolBar;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -57,6 +62,11 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 	
 	Set<Node> scrollBars;
 	
+	ListView<CustomCellContent> list;
+	ObservableList<CustomCellContent> contentList;
+	
+	final TextField textField = new TextField();
+	
 	boolean initialized = false;
 	
 	public void setEditorHistory( HTMLEditorHistory history){
@@ -71,7 +81,9 @@ public class ExtendedHTMLEditor extends HTMLEditor{
 		this.initialized = initialized;
 	}
 
-	public void initialize(){
+	public void initialize(ListView<CustomCellContent> list,ObservableList<CustomCellContent> contentList){
+		this.list=list;
+		this.contentList = contentList;
 		cleaner = new HTMLGarbageCleaner();
 		editorHistory = new HTMLEditorHistory(this);
 		inserter = new HTMLCodeFragmentInserter( this );
@@ -284,7 +296,8 @@ public class ExtendedHTMLEditor extends HTMLEditor{
         		        "Seperator Concept B SubCall"
         		    );
         	final ComboBox<String> comboBox = new ComboBox<String>(options);
-        	bar.getItems().add(comboBox);
+        	final Label label = new Label("Slide Name:");
+        	bar.getItems().addAll(label,textField,comboBox);
         	comboBox.setOnAction( (event)->{
         		int selectedIndex = comboBox.getSelectionModel().getSelectedIndex();
         		String tmp;
@@ -327,6 +340,23 @@ public class ExtendedHTMLEditor extends HTMLEditor{
         		editorHistory.clearHistory();
         		editorHistory.addUndoHistory();
         	} );
+        	
+        	textField.setOnKeyReleased(new EventHandler<Event>() {
+
+				@Override
+				public void handle(Event event) {
+					// TODO Auto-generated method stub
+					CustomCellContent item = list.getSelectionModel().getSelectedItem();
+					if( !item.title.equals("New Slide") )
+					{
+						item.title=textField.getText();
+						contentList.add(new CustomCellContent("temp"));
+						contentList.remove( contentList.size()-1 );
+					}
+				}
+				
+			});
+        	
         }
 		
 	}
