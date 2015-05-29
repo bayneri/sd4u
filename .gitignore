@@ -35,4 +35,4 @@ Temporary Items
 *.war
 *.ear
 
-bin/WebContent/SubjectA/SavedFiles/*.html
+bin/WebContent/SubjectA/SavedFiles/*
