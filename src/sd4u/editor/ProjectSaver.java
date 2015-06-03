@@ -37,9 +37,10 @@ public class ProjectSaver {
 		}
 		
 		for(int i=0;i<list.size();i++)
-		{
-			HTMLSaver.finish( list.get(i).htmlText,sb.toString()+"/"+list.get(i).title,HTMLSaver.PROJECT );
-		}
+			if( !list.get(i).title.equals(MainController.NEW_SLIDE) )
+			{
+				HTMLSaver.finish( list.get(i).htmlText,sb.toString()+"/"+list.get(i).title,HTMLSaver.PROJECT );
+			}
 		
 		//HTMLSaver.finish(htmlEditor.getHtmlText(),sb.toString());
 		

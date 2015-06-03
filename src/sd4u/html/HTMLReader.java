@@ -49,7 +49,7 @@ public class HTMLReader {
 	 */
 	public static void readFile( URL url,ArrayList<String> al){
 		
-		File file = new File(url.getPath());
+		File file = new File( UrlConverter.toJava(url.getPath()) );
 		
 		String returnValue="";
 		String thisLine = null;

@@ -49,7 +49,7 @@ public class MainController implements Initializable{
 	
 	HTMLEditorHistory editorHistory;
 	
-	final String NEW_SLIDE = "Add New Slide";
+	public static final String NEW_SLIDE = "Add New Slide";
 	
 	public static CustomCellContent lastSlide;
 	public static int lastIndex;
@@ -169,7 +169,8 @@ public class MainController implements Initializable{
 		});
 		
 		saveProject.setOnAction(e -> {
-			lastSlide.htmlText=htmlEditor.getBasicHtml();
+			if(lastSlide!=null)
+				lastSlide.htmlText=htmlEditor.getBasicHtml();
 			ProjectSaver saver = new ProjectSaver();
 			saver.save( list );
 		});

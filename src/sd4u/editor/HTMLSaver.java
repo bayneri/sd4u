@@ -34,6 +34,7 @@ public class HTMLSaver {
 		//System.out.println(html);
 		//System.out.println(html);
 		path=UrlConverter.toJava(path);
+		System.out.println("path: " + path);
 		html=showHideAdjust(html);
 		String title = HTMLParser.getTitle(html);
 		String page = HTMLParser.getPage(html);
